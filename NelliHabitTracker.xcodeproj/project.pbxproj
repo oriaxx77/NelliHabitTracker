@@ -1,0 +1,787 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		868C3A1226D983F0DC367F7E /* Pods_NelliHabitTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C9A9C93EA3899032A2A1AD /* Pods_NelliHabitTracker.framework */; };
+		9221A679298FB50117D2940A /* Pods_NelliHabitTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F293531281492B633DB9D57C /* Pods_NelliHabitTrackerTests.framework */; };
+		C258FCF525876A0500D53D6A /* NewHabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258FCF425876A0500D53D6A /* NewHabitViewModel.swift */; };
+		C258FCFE25876FAA00D53D6A /* HabitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258FCFD25876FAA00D53D6A /* HabitRepository.swift */; };
+		C258FD032588A5AB00D53D6A /* HabitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258FD022588A5AB00D53D6A /* HabitFactory.swift */; };
+		C2A382F225837E460021110D /* NelliHabitTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A382F125837E460021110D /* NelliHabitTrackerApp.swift */; };
+		C2A382F425837E460021110D /* HabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A382F325837E460021110D /* HabitsView.swift */; };
+		C2A382F625837E480021110D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2A382F525837E480021110D /* Assets.xcassets */; };
+		C2A382F925837E480021110D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2A382F825837E480021110D /* Preview Assets.xcassets */; };
+		C2A3830425837E490021110D /* NelliHabitTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A3830325837E490021110D /* NelliHabitTrackerTests.swift */; };
+		C2A3830F25837E490021110D /* NelliHabitTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A3830E25837E490021110D /* NelliHabitTrackerUITests.swift */; };
+		C2BF46DC258382DC0092A287 /* HabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF46DB258382DC0092A287 /* HabitView.swift */; };
+		C2BF46E1258386D50092A287 /* NewHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF46E0258386D50092A287 /* NewHabitView.swift */; };
+		C2BF47082583A2A20092A287 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF47072583A2A20092A287 /* Habit.swift */; };
+		E76F0B04EB187E8BA610FA9A /* Pods_NelliHabitTracker_NelliHabitTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC5F18855FEC6F7689054FF /* Pods_NelliHabitTracker_NelliHabitTrackerUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2A3830025837E490021110D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2A382E625837E460021110D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2A382ED25837E460021110D;
+			remoteInfo = NelliHabitTracker;
+		};
+		C2A3830B25837E490021110D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2A382E625837E460021110D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2A382ED25837E460021110D;
+			remoteInfo = NelliHabitTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1C83ECD3C17D8E9155C2AE1B /* Pods-NelliHabitTracker-NelliHabitTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NelliHabitTracker-NelliHabitTrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-NelliHabitTracker-NelliHabitTrackerUITests/Pods-NelliHabitTracker-NelliHabitTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4C6520CE61857167DDBC2FAA /* Pods-NelliHabitTracker-NelliHabitTrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NelliHabitTracker-NelliHabitTrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-NelliHabitTracker-NelliHabitTrackerUITests/Pods-NelliHabitTracker-NelliHabitTrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4DC5F18855FEC6F7689054FF /* Pods_NelliHabitTracker_NelliHabitTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NelliHabitTracker_NelliHabitTrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55DBE2C556A034EEE1A8B616 /* Pods-NelliHabitTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NelliHabitTracker.release.xcconfig"; path = "Target Support Files/Pods-NelliHabitTracker/Pods-NelliHabitTracker.release.xcconfig"; sourceTree = "<group>"; };
+		B75DD9D6BA05A2608F239CFC /* Pods-NelliHabitTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NelliHabitTracker.debug.xcconfig"; path = "Target Support Files/Pods-NelliHabitTracker/Pods-NelliHabitTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		C17DBFBE96F2FC6220F75E8D /* Pods-NelliHabitTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NelliHabitTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-NelliHabitTrackerTests/Pods-NelliHabitTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C258FCF425876A0500D53D6A /* NewHabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitViewModel.swift; sourceTree = "<group>"; };
+		C258FCFD25876FAA00D53D6A /* HabitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitRepository.swift; sourceTree = "<group>"; };
+		C258FD022588A5AB00D53D6A /* HabitFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitFactory.swift; sourceTree = "<group>"; };
+		C2A382EE25837E460021110D /* NelliHabitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NelliHabitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2A382F125837E460021110D /* NelliHabitTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NelliHabitTrackerApp.swift; sourceTree = "<group>"; };
+		C2A382F325837E460021110D /* HabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsView.swift; sourceTree = "<group>"; };
+		C2A382F525837E480021110D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2A382F825837E480021110D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C2A382FA25837E490021110D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2A382FF25837E490021110D /* NelliHabitTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NelliHabitTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2A3830325837E490021110D /* NelliHabitTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NelliHabitTrackerTests.swift; sourceTree = "<group>"; };
+		C2A3830525837E490021110D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2A3830A25837E490021110D /* NelliHabitTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NelliHabitTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2A3830E25837E490021110D /* NelliHabitTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NelliHabitTrackerUITests.swift; sourceTree = "<group>"; };
+		C2A3831025837E490021110D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2BF46DB258382DC0092A287 /* HabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitView.swift; sourceTree = "<group>"; };
+		C2BF46E0258386D50092A287 /* NewHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitView.swift; sourceTree = "<group>"; };
+		C2BF47072583A2A20092A287 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		C3C9A9C93EA3899032A2A1AD /* Pods_NelliHabitTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NelliHabitTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB457FE265B0FE1ED859E3C /* Pods-NelliHabitTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NelliHabitTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-NelliHabitTrackerTests/Pods-NelliHabitTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		F293531281492B633DB9D57C /* Pods_NelliHabitTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NelliHabitTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2A382EB25837E460021110D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				868C3A1226D983F0DC367F7E /* Pods_NelliHabitTracker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2A382FC25837E490021110D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9221A679298FB50117D2940A /* Pods_NelliHabitTrackerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2A3830725837E490021110D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E76F0B04EB187E8BA610FA9A /* Pods_NelliHabitTracker_NelliHabitTrackerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		259211DF9B0FA0ABFF6F0C37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3C9A9C93EA3899032A2A1AD /* Pods_NelliHabitTracker.framework */,
+				4DC5F18855FEC6F7689054FF /* Pods_NelliHabitTracker_NelliHabitTrackerUITests.framework */,
+				F293531281492B633DB9D57C /* Pods_NelliHabitTrackerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C258FCF925876A0D00D53D6A /* new-habit */ = {
+			isa = PBXGroup;
+			children = (
+				C2BF46E0258386D50092A287 /* NewHabitView.swift */,
+				C258FCF425876A0500D53D6A /* NewHabitViewModel.swift */,
+			);
+			path = "new-habit";
+			sourceTree = "<group>";
+		};
+		C2A382E525837E460021110D = {
+			isa = PBXGroup;
+			children = (
+				C2A382F025837E460021110D /* NelliHabitTracker */,
+				C2A3830225837E490021110D /* NelliHabitTrackerTests */,
+				C2A3830D25837E490021110D /* NelliHabitTrackerUITests */,
+				C2A382EF25837E460021110D /* Products */,
+				ED1C0C47DCA21D4A00AB7B50 /* Pods */,
+				259211DF9B0FA0ABFF6F0C37 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C2A382EF25837E460021110D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2A382EE25837E460021110D /* NelliHabitTracker.app */,
+				C2A382FF25837E490021110D /* NelliHabitTrackerTests.xctest */,
+				C2A3830A25837E490021110D /* NelliHabitTrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2A382F025837E460021110D /* NelliHabitTracker */ = {
+			isa = PBXGroup;
+			children = (
+				C2BF47002583A1850092A287 /* domain */,
+				C2BF46E5258386E00092A287 /* stories */,
+				C2A382F125837E460021110D /* NelliHabitTrackerApp.swift */,
+				C2A382F525837E480021110D /* Assets.xcassets */,
+				C2A382FA25837E490021110D /* Info.plist */,
+				C2A382F725837E480021110D /* Preview Content */,
+			);
+			path = NelliHabitTracker;
+			sourceTree = "<group>";
+		};
+		C2A382F725837E480021110D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C2A382F825837E480021110D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C2A3830225837E490021110D /* NelliHabitTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2A3830325837E490021110D /* NelliHabitTrackerTests.swift */,
+				C2A3830525837E490021110D /* Info.plist */,
+			);
+			path = NelliHabitTrackerTests;
+			sourceTree = "<group>";
+		};
+		C2A3830D25837E490021110D /* NelliHabitTrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C2A3830E25837E490021110D /* NelliHabitTrackerUITests.swift */,
+				C2A3831025837E490021110D /* Info.plist */,
+			);
+			path = NelliHabitTrackerUITests;
+			sourceTree = "<group>";
+		};
+		C2BF46E5258386E00092A287 /* stories */ = {
+			isa = PBXGroup;
+			children = (
+				C258FCF925876A0D00D53D6A /* new-habit */,
+				C2BF46DB258382DC0092A287 /* HabitView.swift */,
+				C2A382F325837E460021110D /* HabitsView.swift */,
+			);
+			path = stories;
+			sourceTree = "<group>";
+		};
+		C2BF47002583A1850092A287 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				C2BF47072583A2A20092A287 /* Habit.swift */,
+				C258FCFD25876FAA00D53D6A /* HabitRepository.swift */,
+				C258FD022588A5AB00D53D6A /* HabitFactory.swift */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		ED1C0C47DCA21D4A00AB7B50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B75DD9D6BA05A2608F239CFC /* Pods-NelliHabitTracker.debug.xcconfig */,
+				55DBE2C556A034EEE1A8B616 /* Pods-NelliHabitTracker.release.xcconfig */,
+				1C83ECD3C17D8E9155C2AE1B /* Pods-NelliHabitTracker-NelliHabitTrackerUITests.debug.xcconfig */,
+				4C6520CE61857167DDBC2FAA /* Pods-NelliHabitTracker-NelliHabitTrackerUITests.release.xcconfig */,
+				C17DBFBE96F2FC6220F75E8D /* Pods-NelliHabitTrackerTests.debug.xcconfig */,
+				EBB457FE265B0FE1ED859E3C /* Pods-NelliHabitTrackerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2A382ED25837E460021110D /* NelliHabitTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2A3831325837E490021110D /* Build configuration list for PBXNativeTarget "NelliHabitTracker" */;
+			buildPhases = (
+				3901DD74349868E58BC0784F /* [CP] Check Pods Manifest.lock */,
+				C2A382EA25837E460021110D /* Sources */,
+				C2A382EB25837E460021110D /* Frameworks */,
+				C2A382EC25837E460021110D /* Resources */,
+				78EAB47D00E45F6D539E882B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NelliHabitTracker;
+			productName = NelliHabitTracker;
+			productReference = C2A382EE25837E460021110D /* NelliHabitTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2A382FE25837E490021110D /* NelliHabitTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2A3831625837E490021110D /* Build configuration list for PBXNativeTarget "NelliHabitTrackerTests" */;
+			buildPhases = (
+				2CE05AADFBDF259369BD2132 /* [CP] Check Pods Manifest.lock */,
+				C2A382FB25837E490021110D /* Sources */,
+				C2A382FC25837E490021110D /* Frameworks */,
+				C2A382FD25837E490021110D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2A3830125837E490021110D /* PBXTargetDependency */,
+			);
+			name = NelliHabitTrackerTests;
+			productName = NelliHabitTrackerTests;
+			productReference = C2A382FF25837E490021110D /* NelliHabitTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C2A3830925837E490021110D /* NelliHabitTrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2A3831925837E490021110D /* Build configuration list for PBXNativeTarget "NelliHabitTrackerUITests" */;
+			buildPhases = (
+				970A2AFA6E5DC63EFAF146DC /* [CP] Check Pods Manifest.lock */,
+				C2A3830625837E490021110D /* Sources */,
+				C2A3830725837E490021110D /* Frameworks */,
+				C2A3830825837E490021110D /* Resources */,
+				6047F2F131332BA0CF9B0020 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2A3830C25837E490021110D /* PBXTargetDependency */,
+			);
+			name = NelliHabitTrackerUITests;
+			productName = NelliHabitTrackerUITests;
+			productReference = C2A3830A25837E490021110D /* NelliHabitTrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2A382E625837E460021110D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					C2A382ED25837E460021110D = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					C2A382FE25837E490021110D = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = C2A382ED25837E460021110D;
+					};
+					C2A3830925837E490021110D = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = C2A382ED25837E460021110D;
+					};
+				};
+			};
+			buildConfigurationList = C2A382E925837E460021110D /* Build configuration list for PBXProject "NelliHabitTracker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2A382E525837E460021110D;
+			productRefGroup = C2A382EF25837E460021110D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2A382ED25837E460021110D /* NelliHabitTracker */,
+				C2A382FE25837E490021110D /* NelliHabitTrackerTests */,
+				C2A3830925837E490021110D /* NelliHabitTrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2A382EC25837E460021110D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2A382F925837E480021110D /* Preview Assets.xcassets in Resources */,
+				C2A382F625837E480021110D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2A382FD25837E490021110D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2A3830825837E490021110D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CE05AADFBDF259369BD2132 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NelliHabitTrackerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3901DD74349868E58BC0784F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NelliHabitTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6047F2F131332BA0CF9B0020 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NelliHabitTracker-NelliHabitTrackerUITests/Pods-NelliHabitTracker-NelliHabitTrackerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NelliHabitTracker-NelliHabitTrackerUITests/Pods-NelliHabitTracker-NelliHabitTrackerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NelliHabitTracker-NelliHabitTrackerUITests/Pods-NelliHabitTracker-NelliHabitTrackerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78EAB47D00E45F6D539E882B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NelliHabitTracker/Pods-NelliHabitTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NelliHabitTracker/Pods-NelliHabitTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NelliHabitTracker/Pods-NelliHabitTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		970A2AFA6E5DC63EFAF146DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NelliHabitTracker-NelliHabitTrackerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2A382EA25837E460021110D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2BF46DC258382DC0092A287 /* HabitView.swift in Sources */,
+				C2BF47082583A2A20092A287 /* Habit.swift in Sources */,
+				C2A382F425837E460021110D /* HabitsView.swift in Sources */,
+				C2BF46E1258386D50092A287 /* NewHabitView.swift in Sources */,
+				C258FD032588A5AB00D53D6A /* HabitFactory.swift in Sources */,
+				C258FCF525876A0500D53D6A /* NewHabitViewModel.swift in Sources */,
+				C258FCFE25876FAA00D53D6A /* HabitRepository.swift in Sources */,
+				C2A382F225837E460021110D /* NelliHabitTrackerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2A382FB25837E490021110D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2A3830425837E490021110D /* NelliHabitTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2A3830625837E490021110D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2A3830F25837E490021110D /* NelliHabitTrackerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2A3830125837E490021110D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2A382ED25837E460021110D /* NelliHabitTracker */;
+			targetProxy = C2A3830025837E490021110D /* PBXContainerItemProxy */;
+		};
+		C2A3830C25837E490021110D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2A382ED25837E460021110D /* NelliHabitTracker */;
+			targetProxy = C2A3830B25837E490021110D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C2A3831125837E490021110D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C2A3831225837E490021110D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2A3831425837E490021110D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75DD9D6BA05A2608F239CFC /* Pods-NelliHabitTracker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"NelliHabitTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = YP32TW5GM9;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = NelliHabitTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oriaxx77.NelliHabitTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C2A3831525837E490021110D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55DBE2C556A034EEE1A8B616 /* Pods-NelliHabitTracker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"NelliHabitTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = YP32TW5GM9;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = NelliHabitTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oriaxx77.NelliHabitTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C2A3831725837E490021110D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C17DBFBE96F2FC6220F75E8D /* Pods-NelliHabitTrackerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YP32TW5GM9;
+				INFOPLIST_FILE = NelliHabitTrackerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oriaxx77.NelliHabitTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NelliHabitTracker.app/NelliHabitTracker";
+			};
+			name = Debug;
+		};
+		C2A3831825837E490021110D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBB457FE265B0FE1ED859E3C /* Pods-NelliHabitTrackerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YP32TW5GM9;
+				INFOPLIST_FILE = NelliHabitTrackerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oriaxx77.NelliHabitTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NelliHabitTracker.app/NelliHabitTracker";
+			};
+			name = Release;
+		};
+		C2A3831A25837E490021110D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C83ECD3C17D8E9155C2AE1B /* Pods-NelliHabitTracker-NelliHabitTrackerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YP32TW5GM9;
+				INFOPLIST_FILE = NelliHabitTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oriaxx77.NelliHabitTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NelliHabitTracker;
+			};
+			name = Debug;
+		};
+		C2A3831B25837E490021110D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C6520CE61857167DDBC2FAA /* Pods-NelliHabitTracker-NelliHabitTrackerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YP32TW5GM9;
+				INFOPLIST_FILE = NelliHabitTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oriaxx77.NelliHabitTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NelliHabitTracker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2A382E925837E460021110D /* Build configuration list for PBXProject "NelliHabitTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2A3831125837E490021110D /* Debug */,
+				C2A3831225837E490021110D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2A3831325837E490021110D /* Build configuration list for PBXNativeTarget "NelliHabitTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2A3831425837E490021110D /* Debug */,
+				C2A3831525837E490021110D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2A3831625837E490021110D /* Build configuration list for PBXNativeTarget "NelliHabitTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2A3831725837E490021110D /* Debug */,
+				C2A3831825837E490021110D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2A3831925837E490021110D /* Build configuration list for PBXNativeTarget "NelliHabitTrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2A3831A25837E490021110D /* Debug */,
+				C2A3831B25837E490021110D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2A382E625837E460021110D /* Project object */;
+}

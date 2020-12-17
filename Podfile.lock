@@ -1,0 +1,55 @@
+PODS:
+  - Bow (0.8.0)
+  - BowEffects (0.8.0):
+    - Bow (~> 0.8.0)
+  - BowFree (0.8.0):
+    - Bow (~> 0.8.0)
+  - BowGeneric (0.8.0):
+    - Bow (~> 0.8.0)
+  - BowOptics (0.8.0):
+    - Bow (~> 0.8.0)
+  - BowRecursionSchemes (0.8.0):
+    - Bow (~> 0.8.0)
+  - BowRx (0.8.0):
+    - Bow (~> 0.8.0)
+    - BowEffects (~> 0.8.0)
+    - RxSwift (~> 5.1.1)
+  - Introspect (0.1.1)
+  - RxSwift (5.1.1)
+
+DEPENDENCIES:
+  - Bow
+  - BowEffects
+  - BowFree
+  - BowGeneric
+  - BowOptics
+  - BowRecursionSchemes
+  - BowRx
+  - Introspect
+
+SPEC REPOS:
+  trunk:
+    - Bow
+    - BowEffects
+    - BowFree
+    - BowGeneric
+    - BowOptics
+    - BowRecursionSchemes
+    - BowRx
+    - Introspect
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Bow: a709b8d14ac59d7f1d2f8388891c8632628e7575
+  BowEffects: 16ba770445cbbd0f58c5c9f53edfa3c63098d49e
+  BowFree: 881cb50d812942e9a79db8411f4dff6df5d7c566
+  BowGeneric: 6692347e82564a922f1e8db3fcd3dbf08e889514
+  BowOptics: 2b5801dc9ab7532098cc47d5f2cc38635def9b16
+  BowRecursionSchemes: 0ed89b19d3f04ad05b35478df035697bad1dfb60
+  BowRx: 336e4129a12ebe99a822ae8c3c86dc4f15a57c92
+  Introspect: 50c17d6b1f091f4cfd678ea8a4157ac071808fe3
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+
+PODFILE CHECKSUM: aedbf13aa003f0960856acbcacdc1f04851fdae5
+
+COCOAPODS: 1.9.1
