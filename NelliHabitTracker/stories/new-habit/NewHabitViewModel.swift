@@ -36,7 +36,7 @@ class NewHabitViewModel: ObservableObject {
     // Other
     private var habitRespository: HabitRepository
     private var cancellableSet: Set<AnyCancellable> = []
-    private var isHabitNameValidPublisher: AnyPublisher<Bool, Never> {
+    private var isValidHabitNamePublisher: AnyPublisher<Bool, Never> {
         $habitName
             .debounce(for: 0.8, scheduler: RunLoop.main)
             .removeDuplicates()
@@ -45,7 +45,7 @@ class NewHabitViewModel: ObservableObject {
             }
             .eraseToAnyPublisher()
     }
-    private var isHabitDescriptionValidPublisher: AnyPublisher<Bool, Never> {
+    private var isValidHabitDescriptionPublisher: AnyPublisher<Bool, Never> {
         $habitDescription
             .debounce(for: 0.8, scheduler: RunLoop.main)
             .removeDuplicates()
@@ -82,9 +82,9 @@ class NewHabitViewModel: ObservableObject {
     }
   
   
-    private var isFormValidPublisher: AnyPublisher<Bool, Never> {
+    private var isValidFormPublisher: AnyPublisher<Bool, Never> {
         Publishers
-            .CombineLatest(isHabitNameValidPublisher, isHabitDescriptionValidPublisher)
+            .CombineLatest(isValidHabitNamePublisher, isValidHabitDescriptionPublisher)
             .map { isHabitNameValid, isHabitDescriptionValid in
                 return isHabitNameValid && isHabitDescriptionValid
             }
@@ -94,7 +94,7 @@ class NewHabitViewModel: ObservableObject {
     
     init(habitRepository:HabitRepository) {
         self.habitRespository = habitRepository
-        isHabitNameValidPublisher
+        isValidHabitNamePublisher
             .receive(on: RunLoop.main)
             .map { valid in
                 valid ? "" : "Habit name must at least have 3 characters"
@@ -102,7 +102,7 @@ class NewHabitViewModel: ObservableObject {
             .assign(to: \.habitNameMessage, on: self)
             .store(in: &cancellableSet)
     
-        isHabitDescriptionValidPublisher
+        isValidHabitDescriptionPublisher
             .receive(on: RunLoop.main)
             .map { valid in
                 valid ? "" : "Habit description must at least have 3 characters"
@@ -110,7 +110,7 @@ class NewHabitViewModel: ObservableObject {
             .assign(to: \.habitDescriptionMessage, on: self)
           . store(in: &cancellableSet)
 
-        isFormValidPublisher
+        isValidFormPublisher
             .receive(on: RunLoop.main)
             .assign(to: \.isValidHabit, on: self)
             .store(in: &cancellableSet)

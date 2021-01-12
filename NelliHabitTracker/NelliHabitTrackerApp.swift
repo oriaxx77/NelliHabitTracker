@@ -6,16 +6,19 @@
 //
 
 import SwiftUI
+import CoreData
 
 // See https://developer.apple.com/documentation/swiftui/managing-model-data-in-your-app
 
 @main
 struct NelliHabitTrackerApp: App {
-    // @StateObject var habitRepository = HabitRepository()
+    //let persistenceController = PersistenceController.shared
+    
     var body: some Scene {
         WindowGroup {
-            //HabitsView().environmentObject(Ha)
             HabitsView()
+//            HabitView()
+//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

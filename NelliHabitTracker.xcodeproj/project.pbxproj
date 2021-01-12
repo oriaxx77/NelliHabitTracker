@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		868C3A1226D983F0DC367F7E /* Pods_NelliHabitTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C9A9C93EA3899032A2A1AD /* Pods_NelliHabitTracker.framework */; };
 		9221A679298FB50117D2940A /* Pods_NelliHabitTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F293531281492B633DB9D57C /* Pods_NelliHabitTrackerTests.framework */; };
+		C24252E4258BC4550037311A /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24252E3258BC4550037311A /* OptionalExtensions.swift */; };
+		C24252EC258BC6130037311A /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24252EB258BC6130037311A /* DateExtensions.swift */; };
 		C258FCF525876A0500D53D6A /* NewHabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258FCF425876A0500D53D6A /* NewHabitViewModel.swift */; };
 		C258FCFE25876FAA00D53D6A /* HabitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258FCFD25876FAA00D53D6A /* HabitRepository.swift */; };
 		C258FD032588A5AB00D53D6A /* HabitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258FD022588A5AB00D53D6A /* HabitFactory.swift */; };
+		C2610C8925AD98B0009B2EBA /* HabitCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2610C8725AD98B0009B2EBA /* HabitCoreData.xcdatamodeld */; };
 		C2A382F225837E460021110D /* NelliHabitTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A382F125837E460021110D /* NelliHabitTrackerApp.swift */; };
 		C2A382F425837E460021110D /* HabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A382F325837E460021110D /* HabitsView.swift */; };
 		C2A382F625837E480021110D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2A382F525837E480021110D /* Assets.xcassets */; };
@@ -48,9 +51,12 @@
 		55DBE2C556A034EEE1A8B616 /* Pods-NelliHabitTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NelliHabitTracker.release.xcconfig"; path = "Target Support Files/Pods-NelliHabitTracker/Pods-NelliHabitTracker.release.xcconfig"; sourceTree = "<group>"; };
 		B75DD9D6BA05A2608F239CFC /* Pods-NelliHabitTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NelliHabitTracker.debug.xcconfig"; path = "Target Support Files/Pods-NelliHabitTracker/Pods-NelliHabitTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		C17DBFBE96F2FC6220F75E8D /* Pods-NelliHabitTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NelliHabitTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-NelliHabitTrackerTests/Pods-NelliHabitTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C24252E3258BC4550037311A /* OptionalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtensions.swift; sourceTree = "<group>"; };
+		C24252EB258BC6130037311A /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		C258FCF425876A0500D53D6A /* NewHabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitViewModel.swift; sourceTree = "<group>"; };
 		C258FCFD25876FAA00D53D6A /* HabitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitRepository.swift; sourceTree = "<group>"; };
 		C258FD022588A5AB00D53D6A /* HabitFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitFactory.swift; sourceTree = "<group>"; };
+		C2610C8825AD98B0009B2EBA /* HabitCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HabitCoreData.xcdatamodel; sourceTree = "<group>"; };
 		C2A382EE25837E460021110D /* NelliHabitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NelliHabitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A382F125837E460021110D /* NelliHabitTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NelliHabitTrackerApp.swift; sourceTree = "<group>"; };
 		C2A382F325837E460021110D /* HabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsView.swift; sourceTree = "<group>"; };
@@ -109,6 +115,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C24252E2258BC4190037311A /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C24252E3258BC4550037311A /* OptionalExtensions.swift */,
+				C24252EB258BC6130037311A /* DateExtensions.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		C258FCF925876A0D00D53D6A /* new-habit */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +158,7 @@
 		C2A382F025837E460021110D /* NelliHabitTracker */ = {
 			isa = PBXGroup;
 			children = (
+				C24252E2258BC4190037311A /* extensions */,
 				C2BF47002583A1850092A287 /* domain */,
 				C2BF46E5258386E00092A287 /* stories */,
 				C2A382F125837E460021110D /* NelliHabitTrackerApp.swift */,
@@ -195,6 +211,7 @@
 				C2BF47072583A2A20092A287 /* Habit.swift */,
 				C258FCFD25876FAA00D53D6A /* HabitRepository.swift */,
 				C258FD022588A5AB00D53D6A /* HabitFactory.swift */,
+				C2610C8725AD98B0009B2EBA /* HabitCoreData.xcdatamodeld */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -449,13 +466,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2610C8925AD98B0009B2EBA /* HabitCoreData.xcdatamodeld in Sources */,
 				C2BF46DC258382DC0092A287 /* HabitView.swift in Sources */,
+				C24252EC258BC6130037311A /* DateExtensions.swift in Sources */,
 				C2BF47082583A2A20092A287 /* Habit.swift in Sources */,
 				C2A382F425837E460021110D /* HabitsView.swift in Sources */,
 				C2BF46E1258386D50092A287 /* NewHabitView.swift in Sources */,
 				C258FD032588A5AB00D53D6A /* HabitFactory.swift in Sources */,
 				C258FCF525876A0500D53D6A /* NewHabitViewModel.swift in Sources */,
 				C258FCFE25876FAA00D53D6A /* HabitRepository.swift in Sources */,
+				C24252E4258BC4550037311A /* OptionalExtensions.swift in Sources */,
 				C2A382F225837E460021110D /* NelliHabitTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -782,6 +802,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C2610C8725AD98B0009B2EBA /* HabitCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C2610C8825AD98B0009B2EBA /* HabitCoreData.xcdatamodel */,
+			);
+			currentVersion = C2610C8825AD98B0009B2EBA /* HabitCoreData.xcdatamodel */;
+			path = HabitCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C2A382E625837E460021110D /* Project object */;
 }

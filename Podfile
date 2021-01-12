@@ -13,6 +13,7 @@ target 'NelliHabitTracker' do
   pod "BowEffects"
   pod "BowRx"
   pod "Introspect"
+  pod 'CouchbaseLiteSwift'
 
 
   # Pods for NelliHabitTracker

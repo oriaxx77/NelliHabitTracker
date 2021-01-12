@@ -39,6 +39,7 @@ struct NewHabitView: View {
                 Section {
                         TextField("Habit name", text: $newHabitViewModel.habitName)
                             .autocapitalization(.none)
+                           // .textFieldStyle(RoundedBorderTextFieldStyle())
                     
                         if(!newHabitViewModel.habitNameMessage.isEmpty) {
                             Text(newHabitViewModel.habitNameMessage)
@@ -61,8 +62,11 @@ struct NewHabitView: View {
                     Button(action: { newHabitViewModel.save() }) {
                         Text("Save")
                             .foregroundColor(newHabitViewModel.isValidHabit ? .blue : .gray)
+                            .frame(minWidth: 0, maxWidth: .infinity)
+//                            .background(Color.red)
                     }
-                    .disabled(!self.newHabitViewModel.isValidHabit)                    
+                    .disabled(!self.newHabitViewModel.isValidHabit)
+//                    .padding([.leading, .trailing], 20)
                 }.navigationBarTitle(Text("New Habit"), displayMode: .large)
             }
         }

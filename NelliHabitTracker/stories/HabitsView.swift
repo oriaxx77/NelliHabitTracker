@@ -69,6 +69,26 @@ struct NewButton: View {
     
 }
 
+struct WeeklyProgressView: View {
+    
+    @Binding var weeklyProgress: WeeklyProgress
+    
+    var body: some View {
+        HStack {
+            ForEach(weeklyProgress.progress, id: \.id) { dailyProgress in
+                Text(dailyProgress.day.initial()).foregroundColor(dayColor(dailyProgress.progress))
+            }
+        }
+    }
+    
+    func dayColor(_ dailyProgress: DailyProgress) -> Color {
+        switch dailyProgress {
+        case .unknown: return .gray
+        case .done: return .green
+        case .missed: return .red}
+    }
+}
+
 struct HabitRow: View {
     @ObservedObject var habit: Habit
     
@@ -79,7 +99,10 @@ struct HabitRow: View {
                 Text(habit.name)
                     .font(.system(size: 21, weight: .medium, design: .default))
                 Text(habit.description)
+                WeeklyProgressView(weeklyProgress: $habit.progress.weeklyProgress)
             }
+            Spacer()
+            
         }
     }
     
