@@ -74,11 +74,10 @@ class NewHabitViewModel: ObservableObject {
                             state = NewHabitViewState.error(error)
                         },
                         {habit in
-                            habitRespository.habits.append(habit)
+                            habitRespository.add(habit)
                             state = NewHabitViewState.saved
                         })
-        
-        print("Validating user name: \(habitName) \(validatedHabit) \(state)")
+          
     }
   
   

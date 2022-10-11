@@ -12,12 +12,12 @@ struct HabitView: View {
     
     var body: some View {
         VStack() {
-            Image(systemName: habit.imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 150, height: 150)
-                .clipped()
-                .shadow(radius: 3)
+//            Image(systemName: habit.imageName)
+//                .resizable()
+//                .aspectRatio(contentMode: .fit)
+//                .frame(width: 150, height: 150)
+//                .clipped()
+//                .shadow(radius: 3)
             Text(habit.name)
                 .font(.title)
                 .fontWeight(.medium)

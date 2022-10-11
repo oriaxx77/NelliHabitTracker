@@ -12,13 +12,9 @@ import CoreData
 
 @main
 struct NelliHabitTrackerApp: App {
-    //let persistenceController = PersistenceController.shared
-    
     var body: some Scene {
         WindowGroup {
             HabitsView()
-//            HabitView()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

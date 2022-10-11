@@ -6,5 +6,6 @@ ${BUILT_PRODUCTS_DIR}/BowGeneric/BowGeneric.framework
 ${BUILT_PRODUCTS_DIR}/BowOptics/BowOptics.framework
 ${BUILT_PRODUCTS_DIR}/BowRecursionSchemes/BowRecursionSchemes.framework
 ${BUILT_PRODUCTS_DIR}/BowRx/BowRx.framework
+${PODS_ROOT}/CouchbaseLite-Swift/iOS/CouchbaseLiteSwift.framework
 ${BUILT_PRODUCTS_DIR}/Introspect/Introspect.framework
 ${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework

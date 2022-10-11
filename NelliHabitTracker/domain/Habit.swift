@@ -9,95 +9,99 @@ import Foundation
 import SwiftUI
 import Combine
 
+
+
+
+
 class Habit: ObservableObject, Identifiable {
     var id = UUID()
-    var name: String
+    @Published var name: String
     var description: String = "Some description"
-    var imageName: String = "heart.fill"
-    @Published var progress = Progress()
+    var createdAt: Date = Date()
+    var doneDates: [Date] = [Date]()
     
-    
-    @Published var done = false {
-        didSet {
-            progress.setForToday(done: done)
-        }
-    }
-    
-    init(name: String, description: String = "") {
+    init(id: UUID = UUID(),
+         name: String,
+         description: String = "",
+         createdAt: Date = Date(),
+         doneDates: [Date] = [Date]()) {
+        self.id = id
         self.name = name
+        self.createdAt = createdAt
         self.description = description
-    }
-}
-
-enum DailyProgress {
-    case unknown
-    case done
-    case missed
-}
-
-struct WeekdayProgress {
-    var id = UUID()
-    let day: Weekday
-    let progress: DailyProgress
-    
-    init(day: Weekday) {
-        self.day = day
-        self.progress = day.beforeToday() ? .missed : .unknown
+        self.doneDates = doneDates
     }
     
-    init(day: Weekday, progress: DailyProgress) {
-        self.day = day
-        self.progress = progress
-    }
-}
-
-class Progress: ObservableObject {
-    private var progress: [Date] = [Date]()
-    @Published var weeklyProgress = WeeklyProgress()
-    
-    func setForToday(done: Bool) {
-        weeklyProgress.setForToday(done: done)
-        if (done && isTodayMissing()) {
-            progress.append(Date())
-        } else if (!done && isTodayDone()) {
-            progress.removeLast()
+    func toggleToday() {
+        if (isTodayDone()) {
+            doneDates.removeLast()
+        } else {
+            doneDates.append(Date())
         }
     }
     
-    private func isTodayMissing() -> Bool {
-        if let last = progress.last {
-            return !last.isToday()
-        }
-        return true
-    }
-    
-    private func isTodayDone() -> Bool {
-        if let last = progress.last {
+    func isTodayDone() -> Bool {
+        if let last = doneDates.last {
             return last.isToday()
         }
         return false
     }
     
-}
-
-
-class WeeklyProgress: ObservableObject {
-    @Published var progress = [WeekdayProgress(day:.Sunday),
-                               WeekdayProgress(day:.Monday),
-                               WeekdayProgress(day:.Tuesday),
-                               WeekdayProgress(day:.Wednesday),
-                               WeekdayProgress(day:.Thursday),
-                               WeekdayProgress(day:.Friday),
-                               WeekdayProgress(day:.Saturday)]
     
-    func setForToday(done: Bool) {
-        let dailyProgress: DailyProgress =  done ? .done : .unknown
-        let day = Date().dayOfTheWeek() 
-        for (index, weekdayProgress) in progress.enumerated() {
-            if case day = weekdayProgress.day {
-                progress[index] = WeekdayProgress(day: weekdayProgress.day, progress: dailyProgress)
-            }
-        }
+    var habitStatus: HabitStatus = UnknownHabitStatus()
+    func dailyStatus() -> HabitStatus {
+        return habitStatus
+    }
+    
+    func nextDailyStatus() {
+        name = "akarmi"
+        habitStatus = habitStatus.nextStatus()
     }
     
 }
+
+protocol HabitStatus {
+    var color: Color { get }
+    func nextStatus() -> HabitStatus
+}
+
+
+class UnknownHabitStatus: ObservableObject, HabitStatus {
+    var color: Color = .gray
+    func nextStatus() -> HabitStatus {
+        ShowedUpHabitStatus()
+    }
+}
+
+class ShowedUpHabitStatus: ObservableObject, HabitStatus {
+    var color: Color = .yellow
+    func nextStatus() -> HabitStatus {
+        DoneHabitStatus()
+    }
+}
+
+class DoneHabitStatus: ObservableObject, HabitStatus {
+    var color: Color = .green
+    func nextStatus() -> HabitStatus {
+        MissedHabitStatus()
+    }
+}
+
+class MissedHabitStatus: ObservableObject, HabitStatus {
+    var color: Color = .red
+    func nextStatus() -> HabitStatus {
+        UnknownHabitStatus()
+    }
+}
+
+
+enum DailyStatus {
+    case unknown
+    case showedUp
+    case done
+    case missed
+}
+
+
+
+

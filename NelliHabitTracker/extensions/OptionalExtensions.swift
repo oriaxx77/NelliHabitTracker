@@ -17,6 +17,29 @@ import Foundation
 
 import Foundation
 
+
+
+class TypeCast<S, T> {
+    func cast(_ obj: S) -> Optional<T> {
+        if let obj = obj as? T {
+            return Optional(obj)
+        }
+        else {
+            return Optional.none
+        }
+    }
+    
+    func cast(optional obj: Optional<S>) -> Optional<T> {
+        if let unwrapped = obj {
+            return cast(unwrapped)
+        } else {
+            return Optional.none
+        }
+    }
+}
+
+
+
 public extension Optional {
     // MARK: emptyness
     var isNone: Bool {
@@ -60,6 +83,29 @@ public extension Optional {
         return self ?? secondChoice()
     }
     
+    // Typecast
+
+    func cast<T>(target: T.Type) -> Optional<T> {
+        if let wrapped = self {
+            return TypeCast<Wrapped, T>().cast( wrapped )
+        } else {
+            return Optional<T>.none
+        }
+    }
+    /*
+     func map<T>(_ fn: (Wrapped) throws -> T, default: T) rethrows -> T {
+         return try map(fn) ?? `default`
+     }
+     
+     
+     
+
+
+     return TypeCast<Timestamp>().cast( self.get( field ) as Any )?.dateValue()
+
+
+
+     */
     
     // MARK - then
     // E.g. question.then(sendQuestion(:))
@@ -80,6 +126,8 @@ public extension Optional {
             condition(unwrapped) else { return false }
         return true
     }
+    
+    
     
     
     // MARK on
